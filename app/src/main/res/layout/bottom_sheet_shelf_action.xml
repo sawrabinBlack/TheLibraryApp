@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvShelfNameSBtSheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/margin_medium_2"
+        android:paddingTop="@dimen/margin_medium_2"
+        android:paddingBottom="@dimen/margin_medium_2"
+        android:text="10 Interaction Design Books To Read"
+        android:textSize="@dimen/text_regular_3x"
+
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvRenameShelf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rlBookDetail"
+        android:layout_marginStart="@dimen/margin_medium_3"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:layout_marginBottom="@dimen/margin_medium_2"
+        android:drawableStart="@drawable/ic_baseline_edit_white_24p"
+        android:drawablePadding="@dimen/margin_medium_3"
+        android:drawableTint="@color/black"
+        android:gravity="top"
+        android:text="Rename Shelf"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_regular" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rlBookDetail"
+        android:layout_marginStart="@dimen/margin_medium_3"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:layout_marginBottom="@dimen/margin_medium_3"
+        android:drawableStart="@drawable/ic_baseline_delete_grey_24"
+        android:drawablePadding="@dimen/margin_medium_3"
+        android:gravity="top"
+        android:text="Delete Shelf"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_regular" />
+</LinearLayout>

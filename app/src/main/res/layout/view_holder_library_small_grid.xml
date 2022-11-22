@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/margin_medium_2"
+    android:layout_marginBottom="@dimen/text_regular_2x"
+    android:background="@android:color/transparent">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivLibraryOptionsSmallGrid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:elevation="15dp"
+        app:srcCompat="@drawable/ic_baseline_more_horiz_black_24dp"
+        app:tint="@color/white" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mcBooksImageSmallGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="2dp"
+        app:cardCornerRadius="@dimen/margin_card_medium">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBooksImageSmallGrid"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/background_search_bar"
+
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/ic_launcher_background" />
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvLibraryBookTitleSmallGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mcBooksImageSmallGrid"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:letterSpacing="0.05"
+        android:text="Angels' blood"
+        android:textAllCaps="false"
+        android:textSize="@dimen/text_regular"
+        app:fontFamily="sans-serif" />
+
+
+</RelativeLayout>

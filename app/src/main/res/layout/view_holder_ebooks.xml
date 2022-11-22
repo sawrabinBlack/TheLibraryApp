@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="150dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/margin_medium_2"
+    android:background="@android:color/transparent">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:tint="@color/white"
+        android:id="@+id/ivOptions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:elevation="15dp"
+        app:srcCompat="@drawable/ic_baseline_more_horiz_black_24dp" />
+<com.google.android.material.card.MaterialCardView
+    android:id="@+id/mcBooksImage"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/margin_card_medium"
+    android:elevation="3dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+
+        android:id="@+id/ivBooksImage"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+</com.google.android.material.card.MaterialCardView>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        app:textAllCaps="false"
+        android:textColor="@color/colorAccent"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:maxLines="2"
+        android:letterSpacing="0.05"
+        android:textSize="@dimen/text_regular_2x"
+        android:id="@+id/tvBookTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mcBooksImage"
+        android:text="Angels' blood" />
+
+<!--    <androidx.appcompat.widget.AppCompatTextView-->
+<!--        android:id="@+id/tvPrice"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/tvBookTitle"-->
+<!--        android:text="$8.20" />-->
+
+</RelativeLayout>

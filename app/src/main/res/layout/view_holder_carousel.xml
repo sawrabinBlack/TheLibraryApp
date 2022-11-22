@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_medium_2"
+    android:layout_marginEnd="@dimen/margin_medium"
+    android:elevation="@dimen/margin_card_medium_2">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivOptionsCarousel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="@dimen/margin_card_medium"
+        android:elevation="@dimen/margin_large"
+        android:tint="@color/white"
+        app:srcCompat="@drawable/ic_baseline_more_horiz_black_24dp" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_marginBottom="@dimen/margin_medium_2"
+        android:outlineAmbientShadowColor="@color/gray"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:background="@color/white"
+        app:cardCornerRadius="@dimen/margin_card_medium"
+        app:cardElevation="@dimen/margin_card_medium_2">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBookImageCarousel"
+            android:layout_width="150dp"
+            android:layout_height="250dp"
+            android:scaleType="fitXY"
+
+
+            app:srcCompat="@drawable/ic_launcher_background" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</FrameLayout>

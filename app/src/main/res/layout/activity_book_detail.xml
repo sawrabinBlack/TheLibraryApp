@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.BookDetailActivity">
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_xxlarge">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:elevation="3dp"
+                android:src="@drawable/share_42dp_png" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:elevation="3dp"
+                android:src="@drawable/ic_baseline_arrow_back_ios_24" />
+
+            <RelativeLayout
+                android:id="@+id/rlBookInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:elevation="2dp"
+                android:paddingTop="70dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/mcBooksImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_large"
+                    android:layout_marginEnd="@dimen/margin_medium_3"
+                    android:layout_marginBottom="@dimen/margin_large"
+                    app:cardCornerRadius="@dimen/margin_medium"
+                    app:cardElevation="3dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+
+                        android:id="@+id/ivBookImageDetail"
+                        android:layout_width="120dp"
+                        android:layout_height="200dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/book_placeholder" />
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:id="@+id/tvBookTitleDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_medium_2"
+                    android:layout_toEndOf="@id/mcBooksImage"
+                    android:text="Orange Are not Only Fruit"
+                    android:textSize="@dimen/text_heading_1x"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvAuthorDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvBookTitleDetail"
+                    android:layout_alignStart="@id/tvBookTitleDetail"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:text="Jeanette Winterson"
+                    android:textSize="@dimen/material_text_body1" />
+
+                <TextView
+                    android:id="@+id/tvEbookDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvAuthorDetail"
+                    android:layout_alignStart="@id/tvBookTitleDetail"
+                    android:text="Ebook" />
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llBookWishList"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/rlBookInfo"
+                android:layout_marginTop="@dimen/margin_medium_3"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_medium_2"
+                    android:layout_marginEnd="@dimen/margin_card_medium_2"
+                    android:layout_marginBottom="@dimen/margin_medium"
+                    android:layout_weight="2"
+                    android:background="@drawable/background_search_bar"
+                    android:elevation="2dp"
+                    android:gravity="center"
+                    android:text="Free Sample"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_regular_3x" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/margin_medium_3"
+                    android:layout_marginBottom="@dimen/margin_medium"
+                    android:layout_weight="3"
+                    android:background="@color/cornflower_blue"
+                    android:gravity="center"
+                    android:text="Add To Wishlist"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_regular_3x" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_below="@id/llBookWishList"
+                android:layout_alignTop="@id/tvAboutThisEbook"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_baseline_arrow_forward_24" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAboutThisEbook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llBookWishList"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_xlarge"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:text="About this ebook"
+                android:textSize="@dimen/material_text_title"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvBookDetailAbout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvAboutThisEbook"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:ellipsize="end"
+                android:maxLines="4"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent imperdiet dapibus tortor, ut pulvinar turpis cursus sit amet. Aliquam egestas est ex, eu pharetra massa finibus vel. Pellentesque vulputate velit sed diam finibus, ullamcorper dignissim nunc tincidunt. Phasellus volutpat pulvinar odio scelerisque gravida. Morbi non diam nec odio gravida ultrices." />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvBookDetailRatingAndReview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvBookDetailAbout"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_xlarge"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:layout_marginBottom="@dimen/margin_medium_2"
+                android:text="Rating And Review"
+                android:textSize="@dimen/material_text_title"
+
+                android:textStyle="bold" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignTop="@id/tvBookDetailRatingAndReview"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_baseline_arrow_forward_24" />
+            <androidx.appcompat.widget.AppCompatTextView
+
+                android:id="@+id/tvRatingDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvBookDetailRatingAndReview"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:text="3.9"
+                android:textSize="@dimen/text_big_2x" />
+
+            <RatingBar
+                android:id="@+id/rbBook"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvRatingDetail"
+                android:layout_marginStart="@dimen/margin_medium_3"
+                android:numStars="5"
+                android:rating="4" />
+
+            <ProgressBar
+                android:id="@+id/pbFive"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_below="@id/tvBookDetailRatingAndReview"
+                android:layout_marginStart="@dimen/margin_xxlarge"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:layout_toEndOf="@id/tvRatingDetail"
+                android:progress="40" />
+
+            <ProgressBar
+                android:id="@+id/pbFour"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_below="@id/pbFive"
+                android:layout_marginStart="@dimen/margin_xxlarge"
+                android:layout_marginTop="@dimen/margin_card_medium_2"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:layout_toEndOf="@id/tvRatingDetail"
+                android:progress="40" />
+
+            <ProgressBar
+                android:id="@+id/pbThree"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_below="@id/pbFour"
+                android:layout_marginStart="@dimen/margin_xxlarge"
+                android:layout_marginTop="@dimen/margin_card_medium_2"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:layout_toEndOf="@id/tvRatingDetail"
+                android:progress="40" />
+
+            <ProgressBar
+                android:id="@+id/pbTwo"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_below="@id/pbThree"
+                android:layout_marginStart="@dimen/margin_xxlarge"
+                android:layout_marginTop="@dimen/margin_card_medium_2"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:layout_toEndOf="@id/tvRatingDetail"
+                android:progress="40" />
+
+            <ProgressBar
+                android:id="@+id/pbOne"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_below="@id/pbTwo"
+                android:layout_marginStart="@dimen/margin_xxlarge"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:layout_toEndOf="@id/tvRatingDetail"
+                android:progress="40" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pbTwo"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_card_medium"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:layout_toEndOf="@id/tvRatingDetail"
+                android:text="1" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pbThree"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_card_medium"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:layout_toEndOf="@id/tvRatingDetail"
+                android:text="2" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pbFour"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_card_medium"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:layout_toEndOf="@id/tvRatingDetail"
+                android:text="3" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvBookDetailRatingAndReview"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_card_medium"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:layout_toEndOf="@id/tvRatingDetail"
+                android:text="5" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pbFive"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_card_medium"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:layout_toEndOf="@id/tvRatingDetail"
+                android:text="4" />
+
+            <LinearLayout
+                android:id="@+id/llReview1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rbBook"
+                android:layout_marginTop="@dimen/margin_medium_2">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:srcCompat="@drawable/book_placeholder" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvRatingName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Steven Gomez" />
+
+                    <RatingBar
+                        android:id="@+id/rbUserRating"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvRatingName" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvReview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Steven Gomez" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvComment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rbUserRating"
+                        android:maxLines="4"
+                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent imperdiet dapibus tortor, ut pulvinar turpis cursus sit amet. Aliquam egestas est ex, eu pharetra massa finibus vel. Pellentesque vulputate velit sed diam finibus, ullamcorper dignissim nunc tincidunt. Phasellus volutpat pulvinar odio scelerisque gravida. Morbi non diam nec odio gravida ultrices." />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llReview2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llReview1"
+                android:layout_marginTop="@dimen/margin_medium_2">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:srcCompat="@drawable/book_placeholder" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvRatingName2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Steven Gomez" />
+
+                    <RatingBar
+                        android:id="@+id/rbUserRating2"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvRatingName2" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvReview2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Steven Gomez" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvComment2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rbUserRating2"
+                        android:maxLines="4"
+                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent imperdiet dapibus tortor, ut pulvinar turpis cursus sit amet. Aliquam egestas est ex, eu pharetra massa finibus vel. Pellentesque vulputate velit sed diam finibus, ullamcorper dignissim nunc tincidunt. Phasellus volutpat pulvinar odio scelerisque gravida. Morbi non diam nec odio gravida ultrices." />
+                </RelativeLayout>
+            </LinearLayout>
+            
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPublishedLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llReview2"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_xlarge"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:text="Published"
+                android:textSize="@dimen/material_text_title"
+                android:textStyle="bold"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPublished"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvPublishedLabel"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:ellipsize="end"
+                android:maxLines="4"
+                android:text="December 1,2007 , Open Road + Grove/Atlantic"/>
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>

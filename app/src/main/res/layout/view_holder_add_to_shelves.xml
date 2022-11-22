@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+
+    android:background="@color/white"
+    android:elevation="1dp"
+    android:layout_marginBottom="@dimen/margin_medium_2">
+    <FrameLayout
+        android:layout_weight="1.5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        >
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="@dimen/margin_card_medium"
+            android:layout_width="70dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            >
+            <ImageView
+                android:id="@+id/ivBookImageAddToShelves"
+                android:layout_width="70dp"
+                android:layout_height="100dp"
+                android:elevation="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium_3"
+
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_launcher_foreground">
+
+            </ImageView>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:elevation="@dimen/margin_medium_2"
+            app:cardCornerRadius="@dimen/margin_card_medium"
+            android:layout_width="70dp"
+            android:layout_height="100dp"
+            >
+            <ImageView
+                android:id="@+id/ivBookImageFrontAddToShelves"
+                android:layout_width="70dp"
+                android:layout_height="100dp"
+
+                android:layout_marginEnd="@dimen/margin_medium_3"
+
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_launcher_background">
+
+            </ImageView>
+        </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="4">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:textSize="18sp"
+            android:id="@+id/tvShelfNamesAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To Learn" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNoOfBooksAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvShelfNamesAdd"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:text="3 books" />
+
+
+
+
+
+    </RelativeLayout>
+
+    <CheckBox
+        android:id="@+id/cbAddToShelves"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>

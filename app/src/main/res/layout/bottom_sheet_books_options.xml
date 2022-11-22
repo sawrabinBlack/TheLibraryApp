@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="?attr/bottomSheetStyle"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    android:background="#800E0E0E"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="0dp"
+
+    app:layout_behavior="@string/bottom_sheet_behavior">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+
+        <RelativeLayout
+            android:id="@+id/rlBookDetail"
+            style="@style/Widget.AppCompat.ActionBar.Solid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_xlarge"
+            android:background="@color/white"
+            android:elevation="2dp">
+
+            <com.google.android.material.card.MaterialCardView
+                app:cardCornerRadius="@dimen/margin_card_medium"
+                android:id="@+id/mcBooksImageBtSheet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginBottom="@dimen/margin_medium_2">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivBookImageBtSheet"
+                    android:layout_width="65dp"
+                    android:layout_height="100dp"
+
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/ic_launcher" />
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvBookTitleBottomSheet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginBottom="@dimen/margin_medium"
+                android:layout_toEndOf="@id/mcBooksImageBtSheet"
+                android:shadowColor="#954242"
+                android:shadowDy="30"
+                android:singleLine="false"
+                android:text="The Art Of Learning"
+                android:textSize="@dimen/text_regular_3x"
+                android:textStyle="bold"
+                app:fontFamily="@font/roboto" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAuthorBottomSheet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvBookTitleBottomSheet"
+                android:layout_alignStart="@id/tvBookTitleBottomSheet"
+                android:layout_toEndOf="@id/mcBooksImageBtSheet"
+                android:text="Josh Waitzkin" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+
+                android:id="@+id/tvEBook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvBookTitleBottomSheet"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_toEndOf="@id/tvAuthorBottomSheet"
+                android:text="-  ebook" />
+
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDownload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlBookDetail"
+            android:layout_marginStart="@dimen/margin_medium_3"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_medium_3"
+            android:drawableStart="@drawable/ic_baseline_download_grey_24p"
+            android:drawablePadding="@dimen/margin_medium_3"
+            android:gravity="top"
+            android:text="Download"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvDownload"
+            android:layout_marginStart="@dimen/margin_medium_3"
+            android:layout_marginBottom="@dimen/margin_medium_3"
+            android:drawableStart="@drawable/ic_baseline_delete_grey_24"
+            android:drawablePadding="@dimen/margin_medium_3"
+            android:text="Delete from your library"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAddToShelves"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvDelete"
+            android:layout_marginStart="@dimen/margin_medium_3"
+            android:layout_marginBottom="@dimen/margin_medium_3"
+            android:drawableStart="@drawable/ic_baseline_add_grey_24p"
+            android:drawablePadding="@dimen/margin_medium_3"
+            android:text="Add To Shelves"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvMarkAsRead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvAddToShelves"
+            android:layout_marginStart="@dimen/margin_medium_3"
+            android:layout_marginBottom="@dimen/margin_xxlarge"
+            android:drawableStart="@drawable/ic_baseline_check_grey_24p"
+            android:drawablePadding="@dimen/margin_medium_3"
+            android:text="Mark as Read"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+    </RelativeLayout>
+</RelativeLayout>

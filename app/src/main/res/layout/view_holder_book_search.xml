@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_medium_2">
+
+    <com.google.android.material.card.MaterialCardView
+        app:cardCornerRadius="@dimen/margin_medium"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/height_image_view_list"
+        android:layout_marginEnd="@dimen/margin_medium_3"
+        android:layout_weight="1.7">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBookImageSearch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:scaleType="fitXY"
+            tools:src="@drawable/ic_launcher_background">
+
+        </androidx.appcompat.widget.AppCompatImageView>
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="6">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textStyle="bold"
+            android:letterSpacing="0.05"
+            android:textSize="@dimen/text_regular_2x"
+            android:id="@+id/tvBooksTitleSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Never Send a Human to Do a Machine's Job" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvBookAuthorSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvBooksTitleSearch"
+            android:text="Yong Zhao" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvBookAuthorSearch"
+            android:text="Ebook" />
+
+
+    </RelativeLayout>
+</LinearLayout>

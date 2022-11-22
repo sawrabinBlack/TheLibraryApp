@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="@dimen/margin_medium_2"
+    android:background="@color/white"
+    android:elevation="1dp"
+    android:orientation="horizontal">
+
+    <FrameLayout
+        android:layout_weight="1.5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        >
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="@dimen/margin_card_medium"
+            android:layout_width="70dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            >
+            <ImageView
+                android:id="@+id/ivBookImageBack"
+                android:layout_width="70dp"
+                android:layout_height="100dp"
+                android:elevation="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium_3"
+
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_launcher_foreground">
+
+            </ImageView>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_marginStart="@dimen/margin_card_medium"
+            android:elevation="@dimen/margin_medium_2"
+            app:cardCornerRadius="@dimen/margin_card_medium"
+            android:layout_width="70dp"
+            android:layout_height="100dp"
+            >
+            <ImageView
+                android:id="@+id/ivBookImageFrontShelf"
+                android:layout_width="70dp"
+                android:layout_height="100dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/book_placeholder">
+
+            </ImageView>
+        </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:maxLines="1"
+            android:id="@+id/tvLibraryName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Action"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNoOfBooksLibrary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvLibraryName"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:text="3 books" />
+
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:src="@drawable/ic_baseline_arrow_forward_24" />
+
+
+</LinearLayout>

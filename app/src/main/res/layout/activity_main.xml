@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:layout_marginEnd="@dimen/margin_medium_2"
+        android:layout_marginBottom="@dimen/margin_medium_2"
+        android:background="@drawable/background_search_bar"
+        android:elevation="2dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium"
+            app:srcCompat="@drawable/ic_baseline_search_black_24dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+
+            android:id="@+id/tvSearchPlayBooks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="@dimen/margin_card_medium_2"
+            android:layout_marginBottom="@dimen/margin_card_medium_2"
+            android:layout_toEndOf="@id/ivSearch"
+            android:text="@string/lbl_search_play_books"
+            android:textSize="16sp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            app:cardCornerRadius="16dp"
+            android:layout_marginEnd="@dimen/margin_card_medium">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivProfile"
+                android:layout_width="@dimen/margin_xlarge"
+                android:layout_height="@dimen/margin_xlarge"
+                android:src="@drawable/ic_launcher_background" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/flContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white_smoke"
+            app:menu="@menu/bottom_nav_menu" />
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/bottomSheetBookOption"
+        layout="@layout/bottom_sheet_books_options"
+        android:elevation="@dimen/margin_card_medium" />
+
+    <include
+        android:id="@+id/bottomSheetSortOption"
+        layout="@layout/bottom_sheet_sort_by"
+        android:elevation="@dimen/margin_card_medium" />
+
+    <include
+        android:id="@+id/bottomSheetLayout"
+        layout="@layout/bottom_sheet_layout_choose"
+        android:elevation="@dimen/margin_card_medium" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

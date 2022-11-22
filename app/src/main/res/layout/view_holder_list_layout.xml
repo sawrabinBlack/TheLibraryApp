@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="10"
+    android:layout_marginBottom="@dimen/margin_medium_2"
+    android:layout_marginStart="@dimen/margin_medium"
+    android:layout_marginEnd="@dimen/margin_card_medium_2">
+
+    <ImageView
+        android:id="@+id/ivBookImageList"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="@dimen/margin_medium_3"
+        android:layout_weight="1.3"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_launcher_background">
+
+    </ImageView>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="6.7">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvBooksTitleListLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:letterSpacing="0.05"
+            android:maxLines="2"
+            android:text="Never Send a Human to Do a Machine's Job"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_regular"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvBookAuthorListLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvBooksTitleListLayout"
+            android:text="Yong Zhao"
+
+            android:textSize="@dimen/text_regular" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvBookAuthorListLayout"
+            android:textSize="@dimen/text_regular"
+            android:text="Ebook" />
+
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/ic_baseline_check_grey_24p" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivOptionsListLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_weight="1"
+        android:src="@drawable/ic_baseline_more_horiz_black_24dp" />
+
+</LinearLayout>
